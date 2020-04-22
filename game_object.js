@@ -2,8 +2,10 @@
 // TODO: Hint for level
 // TODO: more obvious win state
 // TODO: Title / styling, disable run button while running, highlight on error
+// TODO: infinite loops kill it. 
 
-var CACHE_KEY = "karel-js-7";
+var CACHE_KEY = "karel-js-cs1";
+// var CACHE_KEY = Math.random();
 var GameObject = {
   currentSnapshots: [],
   renderers: [],
@@ -27,7 +29,7 @@ var GameObject = {
     $('.help').click(this.help.bind(this));
 
     this.main();
-    setInterval(this.update.bind(this), 500);
+    setInterval(this.update.bind(this), 300);
   },
 
   buildLevelSelect: function() {
@@ -75,6 +77,7 @@ var GameObject = {
 
   completed: function() {
     $(".run").html("completed!");
+    alert("You have conquered " + $('.level-select option:selected').text());
   },
 
   code: function() {
@@ -256,7 +259,8 @@ var GameObject = {
       if (this.checkSolution()) {
         this.completed();
       } else {
-        this.reset();
+        alert("not correct yet!");
+        //this.reset();
       }
     }
 

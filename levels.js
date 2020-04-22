@@ -39,6 +39,25 @@ var levels = {
   },
   {
     code: "",
+    name: "Pick Up the Beepers",
+    worlds: [
+      {
+        walls: "0,0,0,0,0,0,0",
+        beepers: [{x: 2, y:0, count: 2}, { x: 3, y: 0, count: 3 }],
+        solution: [],
+        karel: { x: 0, y: 0, direction: 0, isSuper: true }
+      },
+      {
+        walls: "0,0,0,0,0,0,0",
+        beepers: [{x:1, y:0, count: 4}, { x: 3, y: 0, count: 4 }, {x:4, y: 0, count: 1}],
+        solution: [],
+        karel: { x: 0, y: 0, direction: 0, isSuper: true }
+      },
+    ]
+
+  },
+  {
+    code: "",
     name: "Pot Holes",
     worlds: [
       {
@@ -59,6 +78,25 @@ var levels = {
   },
   {
     code: "",
+    name: "Move the Beepers",
+    worlds: [
+      {
+        walls: "0,0,0,0,0,0,0",
+        beepers: [{x: 1, y:0, count: 2}],
+        solution: [{x: 2, y:0, count: 2}],
+        karel: { x: 0, y: 0, direction: 0, isSuper: true }
+      },
+      {
+        walls: "0,0,0,0,0,0,0",
+        beepers: [{x:1, y:0, count: 4}],
+        solution: [{x:2, y:0, count: 4}],
+        karel: { x: 0, y: 0, direction: 0, isSuper: true }
+      },
+    ]
+
+  },
+  {
+    code: "",
     name: "Double the Beepers",
     worlds: [
       {
@@ -73,6 +111,86 @@ var levels = {
         solution: [{ x : 3, y: 0, count: 8 }],
         karel: { x: 0, y: 0, direction: 0, isSuper: true }
       },
+    ],
+  },
+  {
+    code: "",
+    name: "Hospitals",
+    worlds: [
+      {
+        walls:  "8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,12\n" + 
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4\n" +
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4\n" +
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4\n" +
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4\n" +
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4\n" +
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4",
+        beepers: [
+          { x: 3, y: 6, count: 1 },
+          { x: 9, y: 6, count: 1 },
+          { x: 14, y: 6, count: 1 },
+        ],
+        solution: [
+          { x: 3, y: 6, count: 1 },
+          { x: 3, y: 5, count: 1 },
+          { x: 3, y: 4, count: 1 },       
+          { x: 4, y: 6, count: 1 },
+          { x: 4, y: 5, count: 1 },
+          { x: 4, y: 4, count: 1 },        
+          
+          { x: 9, y: 6, count: 1 },
+          { x: 9, y: 5, count: 1 },
+          { x: 9, y: 4, count: 1 },  
+          { x: 10, y: 6, count: 1 },
+          { x: 10, y: 5, count: 1 },
+          { x: 10, y: 4, count: 1 },        
+          
+          { x: 14, y: 6, count: 1 },
+          { x: 14, y: 5, count: 1 },
+          { x: 14, y: 4, count: 1 },             
+          { x: 15, y: 6, count: 1 },
+          { x: 15, y: 5, count: 1 },
+          { x: 15, y: 4, count: 1 },             
+        ],
+        karel: { x: 0, y: 6, direction: 0, isSuper: false }
+      },
+      {
+        walls:  "8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,12\n" + 
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4\n" +
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4\n" +
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4\n" +
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4\n" +
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4\n" +
+                "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4",
+        beepers: [
+          { x: 5, y: 6, count: 1 },
+          { x: 7, y: 6, count: 1 },
+          { x: 14, y: 6, count: 1 },
+        ],
+        solution: [
+          { x: 5, y: 6, count: 1 },
+          { x: 5, y: 5, count: 1 },
+          { x: 5, y: 4, count: 1 },       
+          { x: 6, y: 6, count: 1 },
+          { x: 6, y: 5, count: 1 },
+          { x: 6, y: 4, count: 1 },        
+          
+          { x: 7, y: 6, count: 1 },
+          { x: 7, y: 5, count: 1 },
+          { x: 7, y: 4, count: 1 },  
+          { x: 8, y: 6, count: 1 },
+          { x: 8, y: 5, count: 1 },
+          { x: 8, y: 4, count: 1 },        
+          
+          { x: 14, y: 6, count: 1 },
+          { x: 14, y: 5, count: 1 },
+          { x: 14, y: 4, count: 1 },             
+          { x: 15, y: 6, count: 1 },
+          { x: 15, y: 5, count: 1 },
+          { x: 15, y: 4, count: 1 },             
+        ],
+        karel: { x: 0, y: 6, direction: 0, isSuper: false }
+      }
     ],
   },
   {
