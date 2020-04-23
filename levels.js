@@ -189,7 +189,7 @@ var levels = {
           { x: 15, y: 5, count: 1 },
           { x: 15, y: 4, count: 1 },             
         ],
-        karel: { x: 0, y: 6, direction: 0, isSuper: false }
+        karel: { x: 0, y: 6, direction: 0, isSuper: true }
       }
     ],
   },
