@@ -4,7 +4,7 @@
 // TODO: Title / styling, disable run button while running, highlight on error
 // TODO: infinite loops kill it. 
 
-var CACHE_KEY = "karel-js-cs2";
+var CACHE_KEY = "karel-js-cs3";
 // var CACHE_KEY = Math.random();
 var GameObject = {
   currentSnapshots: [],
